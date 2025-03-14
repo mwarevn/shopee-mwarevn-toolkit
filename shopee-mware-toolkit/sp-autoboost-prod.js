@@ -172,7 +172,7 @@ async function init() {
 
             if (!bumped_products_list) return;
 
-            const bumped_prods = new Set([...bumped_products_list.products.map((i) => i.id)]);
+            // const bumped_prods = new Set([...bumped_products_list.products.map((i) => i.id)]);
 
             const boostedProds = await GetBoostedProds(SHOP_ID);
 
@@ -180,7 +180,8 @@ async function init() {
                 saved_shop_id = boostedProds.id;
 
                 boostedProds.products.forEach((i) => {
-                    bumped_prods.has(Number(i)) && boostingProds.add(i);
+                    // bumped_prods.has(Number(i)) && boostingProds.add(i);
+                    boostingProds.add(i);
                 });
             }
 
