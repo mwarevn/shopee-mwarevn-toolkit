@@ -6,7 +6,7 @@ import { getShopeeSellerCookie } from "./common.js";
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     console.log("Received a message from the contents script!");
     switch (request.action) {
-        case "get-shopee-seller-cookie":
+        case "get-seller-cookie":
             return getShopeeSellerCookie(sendResponse);
         default:
             break;
